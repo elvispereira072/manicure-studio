@@ -28,5 +28,5 @@ Depoimentos de clientes satisfeitos, compartilhando suas experiências positivas
 A seção transmite a confiança e a credibilidade do estúdio, reforçando o valor dos serviços oferecidos.
 Seção de Contato:
 
-Informações detalhadas de contato, incluindo horário de funcionamento, número de telefone para agendamento e formulário para envio de mensagens.
+Informações detalhadas de contato, incluindo horário de funcionamento, número de telefone para agendamento.
 Botão destacado para contato via WhatsApp, permitindo aos clientes agendarem facilmente ou tirarem dúvidas diretamente pela plataforma.
