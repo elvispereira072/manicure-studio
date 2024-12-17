@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matilde's Manicure Studio</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <style>
         /* Custom Styles */
         .menu-bg {
@@ -14,18 +15,22 @@
 
         .btn-pink {
             background-color: #ff6a95;
+            transition: background-color 0.3s, transform 0.3s;
         }
 
         .btn-pink:hover {
             background-color: #ff4a75;
+            transform: scale(1.05);
         }
 
         .btn-whatsapp {
-            background-color: #ff6a95;
+            background-color: #25d366;
+            transition: background-color 0.3s, transform 0.3s;
         }
 
         .btn-whatsapp:hover {
-            background-color: #ff6a95;
+            background-color: #128c7e;
+            transform: scale(1.05);
         }
 
         .hero-bg {
@@ -51,6 +56,7 @@
         .hero-content {
             position: relative;
             z-index: 1;
+            animation: fadeInUp 1s ease-in-out;
         }
 
         .overlay {
@@ -61,6 +67,18 @@
             height: 100%;
             background: linear-gradient(135deg, rgba(255, 154, 158, 0.8), rgba(250, 208, 196, 0.8));
             z-index: 0;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
@@ -75,21 +93,21 @@
                 <a href="#home" class="text-white hover:text-gray-300">Home</a>
                 <a href="#services" class="text-white hover:text-gray-300">Services</a>
                 <a href="#gallery" class="text-white hover:text-gray-300">Gallery</a>
+                <a href="#testimonials" class="text-white hover:text-gray-300">Testimonials</a>
                 <a href="#contact" class="text-white hover:text-gray-300">Contact</a>
             </div>
             <button id="menu-btn" class="block md:hidden text-white focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M4 6h16M4 12h16m-7 6h7"></path>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
             </button>
         </div>
         <div id="menu" class="md:hidden mt-2 hidden flex flex-col space-y-2">
-            <a href="#home" class="text-white hover:text-gray-300">Inicio</a>
-            <a href="#services" class="text-white hover:text-gray-300">Trabalho</a>
-            <a href="#gallery" class="text-white hover:text-gray-300">Galeria</a>
-            <a href="#contact" class="text-white hover:text-gray-300">Contato</a>
+            <a href="#home" class="text-white hover:text-gray-300">Home</a>
+            <a href="#services" class="text-white hover:text-gray-300">Services</a>
+            <a href="#gallery" class="text-white hover:text-gray-300">Gallery</a>
+            <a href="#testimonials" class="text-white hover:text-gray-300">Testimonials</a>
+            <a href="#contact" class="text-white hover:text-gray-300">Contact</a>
         </div>
     </nav>
 
@@ -101,20 +119,19 @@
         </video>
         <div class="overlay"></div>
         <div class="hero-content text-center">
-            <h1 class="text-5xl text-white font-bold">Bem vindo a Matilde's Manicure Studio</h1>
+            <h1 class="text-5xl text-white font-bold">Bem-vindo ao Matilde's Manicure Studio</h1>
             <p class="mt-4 text-white">Sua beleza, minha paixão.</p>
-            <a href="#services" class="mt-6 inline-block btn-pink text-white px-6 py-2 rounded-full shadow-lg">Explorar
-                serviços</a>
+            <a href="#services" class="mt-6 inline-block btn-pink text-white px-6 py-2 rounded-full shadow-lg">Explorar serviços</a>
         </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="py-20 bg-pink-50">
         <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold text-pink-700">Nossos serviços</h2>
+            <h2 class="text-3xl font-bold text-pink-700" data-aos="fade-up">Nossos serviços</h2>
             <div class="mt-8 flex flex-wrap justify-center">
                 <!-- Service Item -->
-                <div class="max-w-sm p-4 m-4 bg-white shadow-lg rounded-lg">
+                <div class="max-w-sm p-4 m-4 bg-white shadow-lg rounded-lg" data-aos="zoom-in">
                     <img src="assets/Foto1.webp" alt="Service" class="rounded-t-lg">
                     <h3 class="mt-4 text-xl font-bold text-pink-700">Manicure</h3>
                     <p class="mt-2 text-gray-700">Desfrute de uma relaxante sessão de manicure.</p>
@@ -127,10 +144,10 @@
     <!-- Gallery Section -->
     <section id="gallery" class="py-20 bg-white">
         <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold text-pink-700">Entre em contato</h2>
+            <h2 class="text-3xl font-bold text-pink-700" data-aos="fade-up">Galeria</h2>
             <div class="mt-8 flex flex-wrap justify-center">
                 <!-- Gallery Item -->
-                <div class="max-w-sm p-4 m-4">
+                <div class="max-w-sm p-4 m-4" data-aos="zoom-in">
                     <img src="assets/Foto2.jpeg" alt="Gallery Image" class="rounded-lg shadow-lg">
                 </div>
                 <!-- More gallery items here -->
@@ -138,25 +155,69 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-pink-50">
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-pink-50">
         <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold text-pink-700">Atendimento</h2>
-            <p class="mt-4 text-gray-700">Sinta-se à vontade para entrar em contato para agendamentos ou qualquer
-                dúvida.</p>
-            <p class="mt-4 text-gray-700">Horário de funcionamento: sexta a sexta, das 9h00 às 20h00</p>
-            <p class="mt-4 text-gray-700">Marque horário comigo: (123) 456-7890</p>
-            <a href="https://wa.me/551234567890" class="mt-6 inline-block btn-whatsapp text-white px-6 py-2 rounded-full shadow-lg">Contact us on WhatsApp</a>
+            <h2 class="text-3xl font-bold text-pink-700" data-aos="fade-up">Depoimentos</h2>
+            <div class="mt-8 flex flex-wrap justify-center">
+                <!-- Testimonial Item 1 -->
+                <div class="max-w-sm p-4 m-4 bg-white shadow-lg rounded-lg" data-aos="zoom-in">
+                    <p class="text-gray-700">"A melhor manicure que já experimentei! Recomendo a todos."</p>
+                    <h3 class="mt-4 text-xl font-bold text-pink-700">- Cliente Satisfeita</h3>
+                </div>
+                <!-- Testimonial Item 2 -->
+                <div class="max-w-sm p-4 m-4 bg-white shadow-lg rounded-lg" data-aos="zoom-in">
+                    <p class="text-gray-700">"O atendimento foi incrível e a qualidade dos serviços é excepcional. Super recomendo!"</p>
+                    <h3 class="mt-4 text-xl font-bold text-pink-700">- Joana M.</h3>
+                </div>
+                <!-- Testimonial Item 3 -->
+                <div class="max-w-sm p-4 m-4 bg-white shadow-lg rounded-lg" data-aos="zoom-in">
+                    <p class="text-gray-700">"Eu adorei o ambiente acolhedor do estúdio, e as manicures são muito profissionais. Voltarei com certeza!"</p>
+                    <h3 class="mt-4 text-xl font-bold text-pink-700">- Maria A.</h3>
+                </div>
+                <!-- Testimonial Item 4 -->
+                <div class="max-w-sm p-4 m-4 bg-white shadow-lg rounded-lg" data-aos="zoom-in">
+                    <p class="text-gray-700">"Serviço maravilhoso! As minhas unhas nunca ficaram tão perfeitas. Recomendo demais!"</p>
+                    <h3 class="mt-4 text-xl font-bold text-pink-700">- Larissa B.</h3>
+                </div>
+                <!-- Testimonial Item 5 -->
+                <div class="max-w-sm p-4 m-4 bg-white shadow-lg rounded-lg" data-aos="zoom-in">
+                    <p class="text-gray-700">"Adorei minha experiência! O ambiente é muito agradável e o trabalho é impecável. Super satisfeita!"</p>
+                    <h3 class="mt-4 text-xl font-bold text-pink-700">- Camila L.</h3>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Contact Section -->
+<section id="contact" class="py-20 bg-pink-50">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-pink-700" data-aos="fade-up">Atendimento</h2>
+        <p class="mt-4 text-gray-700" data-aos="fade-up">Sinta-se à vontade para entrar em contato para agendamentos ou qualquer dúvida.</p>
+        <p class="mt-4 text-gray-700" data-aos="fade-up">Horário de funcionamento: sexta a sexta, das 9h00 às 20h00</p>
+        <p class="mt-4 text-gray-700" data-aos="fade-up">Marque horário comigo: (123) 456-7890</p>
+        <form action="https://formspree.io/f/{your_form_id}" method="POST" class="mt-8 max-w-lg mx-auto" data-aos="fade-up">
+            <div class="flex flex-col space-y-4">
+                <input type="text" name="name" placeholder="Seu Nome" class="p-2 border border-pink-300 rounded">
+                <input type="email" name="email" placeholder="Seu Email" class="p-2 border border-pink-300 rounded">
+                <textarea name="message" rows="4" placeholder="Sua Mensagem" class="p-2 border border-pink-300 rounded"></textarea>
+                <button type="submit" class="btn-pink text-white px-4 py-2 rounded shadow">Enviar</button>
+            </div>
+        </form>
+        <div class="mt-8" data-aos="fade-up">
+            <a href="https://wa.me/5581995549797" class="btn-whatsapp text-white px-6 py-2 rounded-full shadow-lg inline-block">WhatsApp</a>
+        </div>
+    </div>
+</section>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-        document.getElementById('menu-btn').addEventListener('click', function () {
-            var menu = document.getElementById('menu');
-            menu.classList.toggle('hidden');
+        AOS.init();
+
+        document.getElementById("menu-btn").addEventListener("click", function() {
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("hidden");
         });
     </script>
-
 </body>
-
 </html>
