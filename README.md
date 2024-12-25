@@ -1,4 +1,4 @@
-Projeto: Matilde's Manicure Studio
+Projeto: Manicure Studio
 
 Objetivo:
 Desenvolver um site moderno, atraente e funcional para o estúdio de manicure de Matilde, destacando os serviços oferecidos, uma galeria de imagens dos trabalhos realizados e informações de contato de forma intuitiva e visualmente impactante.
